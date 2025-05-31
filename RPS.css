@@ -1,0 +1,189 @@
+/* General Button Styles */
+button {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #fff;
+  background: linear-gradient(145deg, #2600ff, #2600ff);
+  border: none;
+  border-radius: 50px;
+  padding: 15px 30px;
+  cursor: pointer;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2), 0 -2px 5px rgba(255, 255, 255, 0.1);
+  transition: transform 0.2s ease-in-out, background 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover Effect */
+button:hover {
+  background: linear-gradient(145deg, #0a464e, #0a464e);
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2), 0 -4px 8px rgba(255, 255, 255, 0.1);
+}
+
+/* Active/Click Effect */
+button:active {
+  transform: translateY(2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 -1px 2px rgba(255, 255, 255, 0.1);
+}
+
+/* Focus Effect (when clicked or tabbed to) */
+button:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(255, 105, 180, 0.7);  /* Pink glow */
+}
+
+/* Styling for the Game Mode Buttons */
+#gameModeSelection button {
+  font-size: 1.5rem;
+  padding: 12px 24px;
+  margin: 10px 15px;
+  background: linear-gradient(145deg, #4CAF50, #45a049);
+  border-radius: 25px;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+#gameModeSelection button:hover {
+  background: linear-gradient(145deg, #45a049, #4CAF50);
+  transform: scale(1.1);
+}
+
+#gameModeSelection button:active {
+  transform: scale(1.05);
+}
+
+#gameModeSelection button:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(0, 123, 255, 0.7); /* Blue glow */
+}
+
+#player1Display, #player2Display {
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.2);  /* Slight white background for readability */
+  border-radius: 10px;
+  width: 100%;
+}
+
+/* Additional Styling for Score, Result, and Other Elements */
+.scoreDisplay {
+  font-size: 1.5rem;
+  margin: 10px 0;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  color: white;
+}
+
+#resultDisplay {
+  font-size: 3rem;
+  font-weight: bold;
+  margin: 20px 0;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  color: white;
+  text-align: center;
+}
+.scoreContainer {
+  background-color: rgba(0, 0, 0, 0.5);  /* Semi-transparent background */
+  padding: 20px;  /* Padding for space inside the box */
+  margin-top: 50px;  /* Pushing the container down */
+  border-radius: 15px;  /* Rounded corners */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;  /* Space between the player displays */
+  width: 80%;  /* Make the container take up most of the screen width */
+  text-align: center;
+  color: white;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3); /* Box shadow for a floating effect */
+}
+
+/* General Page Styles */
+body {
+  background: linear-gradient(to bottom right, #06073a, #7b7dfe);
+  font-family: 'Segoe UI Emoji', 'Segoe UI Symbol', 'Quivira', 'Symbola';
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  padding: 20px;
+  color: white;
+}
+
+h1.title {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Scoreboard Container Styling */
+.scoreDisplay {
+  display: inline-block;
+  margin: 10px;
+}
+
+/* Container for Buttons */
+.choices {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.choices button {
+  margin: 0 15px;
+  font-size: 5rem;
+  width: 100px;
+  height: 100px;
+  background-color: transparent;
+  border: 2px solid white;
+  color: white;
+  transition: transform 0.2s ease-in-out, border 0.3s ease;
+  cursor: pointer;
+}
+
+.choices button:hover {
+  transform: scale(1.1);
+  border-color: #00c3ff;
+}
+
+/* History Log Styling */
+.historyLog {
+  margin-top: 30px;
+  max-height: 200px;
+  overflow-y: auto;
+  width: 80%;
+  font-size: 1rem;
+  background: rgba(255, 255, 255, 0.6);
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 10px;
+  scroll-behavior: smooth;
+  color: black;
+}
+
+/* Result Animation */
+.pop {
+  animation: popResult 0.4s ease forwards;
+}
+
+@keyframes popResult {
+  0% {
+    transform: scale(1);
+    opacity: 0.3;
+  }
+  50% {
+    transform: scale(1.3);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Color Styles */
+.greenText { color: #00ff90; }
+.redText { color: #ff4040; }
+.yellowText { color: #ffd700; }
